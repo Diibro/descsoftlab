@@ -1,0 +1,374 @@
+/* importing from other files */
+
+/*animation*/
+
+@keyframes shineItem{
+     0%{
+          box-shadow: 1px 1px 1px rgb(60, 73, 92);
+     }
+     100%{
+          box-shadow: 1px 1px 20px white;
+     }
+}
+
+@keyframes changeBackHome{
+     0%{
+          background-image: url('./assets/test/back_4.jpg');
+     }
+     20%{
+          background-image: url('./assets/test/back_4.jpg');
+     }
+     30%{
+          background-image: url('./assets/test/back_3.jpg');
+     }
+     50%{
+          background-image: url('./assets/test/back_3.jpg');
+     }
+     60%{
+          background-image: url('./assets/test/back_2.jpg');
+     }
+     80%{
+          background-image: url('./assets/test/back_2.jpg');
+     }
+     90%{
+          background-image: url('./assets/test/back_1.jpg');
+     }
+     95%{
+          background-image: url('./assets/test/back_1.jpg');
+     }
+     100%{
+          background-image: url('./assets/test/back_4.jpg');
+     }
+}
+
+/*general styles */
+
+body{
+     width: 100vw;
+     overflow-x: hidden;
+     padding: 0;
+
+}
+
+*{
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+     border: 0px solid red;
+}
+:root{
+     font-size: 20px;
+}
+
+.App{
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     
+     
+}
+/*Styling the Page Cover*/
+.pageCover{
+     position: absolute;
+     z-index: 0;
+     width: 100%;
+     height: 100vh;
+     background-color: #0e181f9f;
+}
+/* Styling the userspage header componet */
+
+.page{
+     position: relative;
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     background-repeat: no-repeat;
+     background-size: 100%;
+     animation: 50s changeBackHome infinite ;
+     transition: all 1s;
+     background-attachment: fixed;
+}
+
+.Header{
+     position: sticky;
+     top: 0;
+     width: 100%;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: center;
+     background-color: #114e6615;
+     z-index: 10;
+}
+
+.Header .logo-container{
+     width: 30%;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: left;
+}
+
+.Header .logo-container img{
+     width: clamp(70px, 12.5%, 100px);
+}
+
+.Header .logo-container h2{
+     font-size: 1.5rem;
+     color: #8fd2ec;
+     text-shadow: 1px 1px 1px rgb(14, 27, 36);
+     padding: 0 10px;
+}
+
+.Header .nav-container{
+     width:clamp(100px, 5%, 150px);
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: center;
+     aspect-ratio: 100/50;
+
+}
+
+.Header .nav-container .nav-bar{
+     width: 40%;
+     font-size: 30px;
+     color: #8fd2ec;
+     font-weight: 600;
+     background: transparent;
+     border: none;
+}
+
+.Header .nav-container .nav-bar:hover{
+     cursor: pointer;
+}
+
+.Header .nav-container .nav-menu{
+     position: absolute;
+     top: 10%;
+     right: -220px;
+     width: 200px;
+     aspect-ratio: 1/1;
+     transition: all 1s;
+     z-index: 2;
+}
+
+.Header .nav-container .nav-menu ul{
+     position: relative;
+     list-style: none;
+     width: 100%;
+     padding: 0;
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     box-shadow: 1px 1px 5px #02243365;
+     background-color: #112e3aab;
+     border-radius: 50% 50% 50% 50%;
+}
+
+
+.Header .nav-container .nav-menu ul .li{
+     position: absolute;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: center;
+     background: #12334eb0;
+     border-radius: 5px 5px 5px 0;
+     padding: 0 3px;
+     transition: all 1s;
+}
+
+.Header .nav-container .nav-menu ul .li:hover{
+     animation: 5s shineItem infinite;
+}
+.Header .nav-container .nav-menu ul .home{
+     top: 10%;
+     left: 25%;
+}
+
+.Header .nav-container .nav-menu ul .about{
+     top: 32%;
+     left: 10%;
+}
+
+.Header .nav-container .nav-menu ul .contact{
+     top: 54%;
+     left: 10%;
+}
+
+.Header .nav-container .nav-menu ul .work{
+     top: 76%;
+     left: 25%;
+}
+
+.Header .nav-container .nav-menu ul .li i{
+     font-size: 25px;
+     padding: 0;
+     margin: 0;
+}
+
+.Header .nav-container .nav-menu ul .li:hover  span{
+     display: block;
+} 
+
+.Header .nav-container .nav-menu ul .li span{
+     margin: 0;
+     padding: 0;
+     margin-left: 20px;
+     margin-right: 10px;
+     font-size: 18px;
+     display: none;
+     transition: all 1s;
+     color: #00b7ff;
+     font-weight: bold;
+}
+.Header .nav-container .nav-menu ul .li a{
+     text-decoration:none;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+}
+
+.Header .nav-container .nav-menu .close {
+     position: absolute;
+     width: 40px;
+     color: white;
+     top: 0;
+     font-size: 20px;
+     background-color: transparent;
+     border:none;
+     border-radius: 20px;
+     aspect-ratio: 1/1;
+     transition: transform 1s;
+}
+
+.Header .nav-container .nav-menu .close:hover{
+     background-color: #0b2b41;
+     cursor: pointer;
+     transform: scale(1.2);
+}
+
+/*styling the footer */
+
+.footer{
+     position: relative;
+     width: 100%;
+     background-color: #082733;
+     color: white;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding: 20px 0;
+     bottom: 0%;
+     z-index: 1;
+}
+
+.footer p{
+     font-size: 0.9rem;
+}
+
+/*styling the home page */
+
+.page .home_page{
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     padding: 10px 0;
+     z-index: 1;
+
+}
+
+.page .home_sec1{
+     width: clamp(370px, 80%, 1600px);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+
+}
+
+.page .home_sec1 .row{
+     width: 100%;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+     flex-wrap: wrap;
+}
+
+.page .home_sec1 .row .col{
+     width: clamp(350px,45%, 900px);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-evenly;
+}
+
+.page .home_sec1 .row .col h1{
+     font-size: 3.8rem;
+     font-weight: 900;
+     margin: 20px 0;
+     color: #b7d3ec;
+     text-shadow: 1px 4px 2px #071920;
+     -webkit-text-stroke-width: 2px;
+     -webkit-text-stroke-color: #052022;
+
+}
+
+.page .home_sec1 .row .col .getInTouch{
+     position: relative;
+     width: 100%;
+}
+
+.page .home_sec1 .row .col .getInTouch p {
+     font-size: 1.6rem;
+     font-weight: bold;
+     margin-bottom: 20px;
+     color: #8fafad;
+     text-shadow: 1px 2px 2px rgb(31, 36, 43);
+}
+
+.page .home_sec1 .row .col .getInTouch button{
+     position: relative;
+     width: clamp(120px, 30%, 600px);
+     font-size: 1rem;
+     font-weight: bold;
+     padding: 10px 0;
+     border-radius: 10px;
+     align-self:flex-end;
+     background-color: #0f4169;
+     color: white;
+     box-shadow: 2px 2px #083549;
+     transition: all 1s;
+}
+
+.page .home_sec1 .row .col .getInTouch button:hover{
+     cursor: pointer;
+     background-color: white;
+     color: #082733;
+     box-shadow: 7px 7px #227497;
+
+}
+.page .home_sec1 .row .col img{
+     width: clamp(390px, 80%, 1200px);
+     border-radius: 20px;
+     margin: 20px 0;
+}
+
+@media only screen and (max-width: 1200px){
+     :root{
+          font-size: 14px;
+     }
+}
+
+@media only screen and (max-width: 768px){
+     :root{
+          font-size: 12px;
+     }
+}
