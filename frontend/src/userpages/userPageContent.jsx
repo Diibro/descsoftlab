@@ -4,12 +4,10 @@ import About from './About';
 import Contact from './Contact';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import PageCover from '../components/PageCover';
 
 const UserPageContent = () => {
   return (
     <div className='page'>
-      <PageCover />
       <Header />
       <Routes>
         <Route index path='/' element={<Home />} />
