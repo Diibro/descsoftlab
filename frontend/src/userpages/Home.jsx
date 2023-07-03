@@ -2,33 +2,37 @@
 // import Elect1 from '../assets/page/elect_1.jpg';
 // import Amazon from 
 import Image1 from '../assets/test/comp1-R.png';
-
-import {NavLink} from 'react-router-dom'
+import Navitrans from "../assets/partners/Navitrans2-r.png";
+import Ikuzo from "../assets/partners/IkuzoR.png";
+import Inuma from "../assets/partners/inuma.png";
+import {NavLink} from 'react-router-dom';
+import Acorns from "../assets/partners/AcornsR.png";
+import Levy from "../assets/partners/levy.png";
 
 const partners = [
   {
     name: "Navitrans Rwanda",
-    logo: "assets/partners/Navitrans2-r.png",
+    logo: Navitrans,
     url: "https://www.amazon.com"
   },
   {
     name: "Ikuzo Tech Group",
-    logo:"assets/partners/IkuzoR.png",
+    logo:Ikuzo,
     url: "https://ikuzotechnologies.com/"
   },
   {
     name: "Inuma Technologies",
-    logo: "assets/partners/inuma.png",
+    logo: Inuma,
     url: "https://www.inumatechnology.com/"
   },
   {
     name: "Acorns Consultancy",
-    logo: "assets/partners/AcornsR.png",
+    logo: Acorns,
     url: "https://acornsconsultancy.com"
   },
   {
     name: "Levy Trading Motors",
-    logo: "assets/partners/levy.png",
+    logo: Levy,
     url: "https://levytradingmotors.co.uk"
   }
 ]
