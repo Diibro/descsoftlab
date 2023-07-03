@@ -1,5 +1,37 @@
 // import Soft1 from '../assets/page/soft_1.jpg';
 // import Elect1 from '../assets/page/elect_1.jpg';
+// import Amazon from 
+import Image1 from '../assets/test/comp1-R.png';
+
+import {NavLink} from 'react-router-dom'
+
+const partners = [
+  {
+    name: "Navitrans Rwanda",
+    logo: "src/assets/partners/Navitrans2-r.png",
+    url: "https://www.amazon.com"
+  },
+  {
+    name: "Ikuzo Tech Group",
+    logo:"src/assets/partners/IkuzoR.png",
+    url: "https://ikuzotechnologies.com/"
+  },
+  {
+    name: "Inuma Technologies",
+    logo: "src/assets/partners/inuma.png",
+    url: "https://www.inumatechnology.com/"
+  },
+  {
+    name: "Acorns Consultancy",
+    logo: "src/assets/partners/AcornsR.png",
+    url: "https://acornsconsultancy.com"
+  },
+  {
+    name: "Levy Trading Motors",
+    logo: "src/assets/partners/levy.png",
+    url: "https://levytradingmotors.co.uk"
+  }
+]
 
 const Home = () => {
   return (
@@ -14,8 +46,35 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="sec-2">
-        
+      <div className="home_sec2">
+        <h3>Our Partners</h3>
+        {
+          partners.map((partner, index) => (
+            <div className='home_partner' key={index}>
+              <NavLink to={partner.url} target='_blank'><img src={partner.logo} alt={partner.name} /></NavLink>
+              <h4>{partner.name}</h4>
+            </div>
+          ) )
+        }
+      </div>
+      <div className="home_sec3">
+        <div className='content'>
+          <h3>Why Desc Softlab</h3>
+          <p>At Desc Softlab, we believe in the transformative power of technology and its ability to drive growth and success.With a comprehensive range of services, we are committed to delivering tailored solutions that meet the unique needs of our clients.</p>
+          <div>
+            <p>Our team of experienced professionals works hard to ensure that all our clients are satsified, we always keep in mind:</p>
+            <ul>
+              <li>Timely delivery</li>
+              <li>Customer Satsifaction</li>
+              <li>Proactive Problem-solving</li>
+              <li>Best Quality products</li>
+              <li>Effective Communication</li>
+              <li>Confidentiality</li>
+            </ul>
+            <p>We combine cutting-edge technologies, industry best practices, and creative expertise to deliver exceptional results for our clients.</p>
+            <img src={Image1} alt="" />
+          </div>
+          </div>
       </div>
     </div>
   )
