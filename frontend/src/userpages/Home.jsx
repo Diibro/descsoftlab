@@ -8,27 +8,27 @@ import {NavLink} from 'react-router-dom'
 const partners = [
   {
     name: "Navitrans Rwanda",
-    logo: "src/assets/partners/Navitrans2-r.png",
+    logo: "assets/partners/Navitrans2-r.png",
     url: "https://www.amazon.com"
   },
   {
     name: "Ikuzo Tech Group",
-    logo:"src/assets/partners/IkuzoR.png",
+    logo:"assets/partners/IkuzoR.png",
     url: "https://ikuzotechnologies.com/"
   },
   {
     name: "Inuma Technologies",
-    logo: "src/assets/partners/inuma.png",
+    logo: "assets/partners/inuma.png",
     url: "https://www.inumatechnology.com/"
   },
   {
     name: "Acorns Consultancy",
-    logo: "src/assets/partners/AcornsR.png",
+    logo: "assets/partners/AcornsR.png",
     url: "https://acornsconsultancy.com"
   },
   {
     name: "Levy Trading Motors",
-    logo: "src/assets/partners/levy.png",
+    logo: "assets/partners/levy.png",
     url: "https://levytradingmotors.co.uk"
   }
 ]
